@@ -58,14 +58,14 @@ def ler_xml_servico(nota):
 
 import os
 
-lista_arquivos = os.listdir(r"C:\\Users\\Rufinissimo\\Documents\\Cursos\\Hashtag Treinamentos\\Python\\Python Impressionador\\Leitura de Arquivos\\Mentoria - Leitura de XML e Notas Fiscais\\NFs Finais") # lista os nomes dos arquivos de uma pasta
+lista_arquivos = os.listdir(r"") # lista os nomes dos arquivos de uma pasta
 
 for arquivo in lista_arquivos: # para cada arquivo
     if 'xml' in arquivo: # se tem xml no nome do arquivo
         if 'DANFE' in arquivo: # se tem DANFE no nome do arquivo
-            print(ler_xml_danfe(f'C:\\Users\\Rufinissimo\\Documents\\Cursos\\Hashtag Treinamentos\\Python\\Python Impressionador\\Leitura de Arquivos\\Mentoria - Leitura de XML e Notas Fiscais\\NFs Finais/{arquivo}')) # rodar o leitor de XML de DANFE para esse arquivo
+            print(ler_xml_danfe(f'')) # rodar o leitor de XML de DANFE para esse arquivo
         else:
-            print(ler_xml_servico(f'C:\\Users\\Rufinissimo\\Documents\\Cursos\\Hashtag Treinamentos\\Python\\Python Impressionador\\Leitura de Arquivos\\Mentoria - Leitura de XML e Notas Fiscais\\NFs Finais/{arquivo}'))
+            print(ler_xml_servico(f''))
 
 
 # valor_total, produtos/servicos (valores), cnpj_vendeu, nome_vendeu, cpf/cnpj_comprou, nome_comprou
@@ -88,4 +88,5 @@ for arquivo in lista_arquivos: # para cada arquivo
 #             df = pd.DataFrame.from_dict(ler_xml_servico(f'NFs Finais/{arquivo}'))
 #         df_final = df_final.append(df)
 # print(df_final)
+
 # df_final.to_excel('NFs.xlsx', index=False)
